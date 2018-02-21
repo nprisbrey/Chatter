@@ -4,7 +4,7 @@ import time
 sock=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 print("What port would you like to host on?")
 servport=input()
-sock.bind(("127.0.0.1",servport))
+sock.bind(("127.0.0.1",int(servport)))
 sock.listen(1)
 sock.setblocking(0)
 pr=[]
